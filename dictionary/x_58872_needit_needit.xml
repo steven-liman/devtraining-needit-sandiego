@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Request Type" mandatory="true" max_length="40" name="u_choice_6" type="string">
+            <choice>
+                <element inactive_on_update="false" label="HR" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Legal" sequence="1" value="legal"/>
+                <element inactive_on_update="false" label="IT" sequence="2" value="it"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Request Item" mandatory="true" max_length="40" name="u_choice_7" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Complaint" sequence="0" value="complaint"/>
+                <element inactive_on_update="false" label="Badge Card" sequence="1" value="badge card"/>
+                <element inactive_on_update="false" label="IT Hardware" sequence="2" value="it hardware"/>
+                <element inactive_on_update="false" label="General Help" sequence="3" value="general help"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Date Required" mandatory="true" max_length="40" name="u_glide_date_3" type="glide_date"/>
+        <element attributes="encode_utf8=false" label="Requested For" mandatory="true" max_length="32" name="u_reference_4" reference="sys_user" type="reference"/>
+    </element>
+</database>
